@@ -39,4 +39,4 @@ To cite R/UAStools in publications, use:
 https://github.com/andersst91/UAStools
 
 ### Liscense
-[Licensed](LICENSE) under [GPL-3](https://www.r-project.org/Licenses/GPL-3).
+[Licensed](LICENSE) under [GPL-2](https://www.r-project.org/Licenses/GPL-2).
