@@ -1,0 +1,24 @@
+#' @title Infile Sample Dataset
+#'
+#' @description Example of infile structure for the plotshpcreat function.
+#' Contains the preperation file used to design the CS17-G2FE experiment, which
+#' contains 594 two row plots and 1188 observations.
+#'
+#' @name SampleInfile
+#' @docType data
+#' @usage SampleInfile
+#' @format A dataframe containg the preperation file used to design the CS17-G2FE experiment, which
+#' contains 594 two row plots and 1188 observations.
+#'
+#' We recommend have repeated Barcodes and Plot numbers if there are multirow plots (mrowplot>1) as
+#' the plotshpcreatre function accounts for this redundance within the function.
+#'
+#'  [,1] Barcode     A unique identifier for each plot (character)
+#'  [,2] Plot        The number of each plot (numeric)
+#'  [,3] Range       The range [also called row] number of each plot in the experimental grid (numeric)
+#'  [,4] Row         The row [also called column] number of each plot in the experimental grid (numeric)
+#' @note
+#' Only Range, Row, Plot, and Barcode variables are necessary for the the proper execution of plotshpcreate,
+#' but additional columns may be included in the dataframe.
+#' @keywords datasets infile sample
+NULL
