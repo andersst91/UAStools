@@ -1,7 +1,8 @@
-### [R/UAStools](https://github.com/andersst91/UAStools/wiki) 
+# [R/UAStools](https://github.com/andersst91/UAStools/wiki) 
 
-# Authors:
-[Steven L. Anderson](andersst@tamu.edu)
+#### Authors:
+Steven L. Anderson II (andersst@tamu.edu)  
+Seth C. Murray (sethmurray@tamu.edu)
 
 # Installation  </br>
 To install UAS tools execute the following commands in R:</br>
