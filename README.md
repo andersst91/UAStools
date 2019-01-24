@@ -9,7 +9,11 @@ UAStools is a package developed to provide useful tools for working with remote 
 
 
 # Installation  
-To install UAS tools execute the following commands in R:  
+Make sure you have the latest version of [R](https://cran.r-project.org/). 
+
+[R/UAStools](https://github.com/andersst91/UAStools/wiki) is availible on GitHub.
+
+To install [R/UAStools](https://github.com/andersst91/UAStools/wiki) execute the following commands in R:  
 
     install.packages("devtools") 
     library("devtools")
