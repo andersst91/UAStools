@@ -1,6 +1,6 @@
-# UAStools
+### [R/UAStools](https://github.com/andersst91/UAStools/wiki) 
 </br>
-# Installation  
+# Installation  </br>
 To install UAS tools execute the following commands in R:</br>
 </br>
 install.packages("devtools") </br>
