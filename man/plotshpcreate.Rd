@@ -75,14 +75,15 @@ the plotshpcreatre function accounts for this redundance within the function.
 \examples{
 
 
-# Creates shape file for each individual with the inclusion of multirow plot design
-# with nrowplot>1 and multirowind=T. Unique identifiers are subset by the location
-# of the adjacent plots reading from left to right in geographical space.
+### Creates shape file for each individual with the inclusion of multirow plot design
+### with nrowplot>1 and multirowind=T. Unique identifiers are subset by the location
+### of the adjacent plots reading from left to right in geographical space.
 
-setwd("Insert WD")
+### Set working directory to where you want the files to be saved
+setwd("C://Temp")
 
-plotshpcreate(A=c(746374.266,3382152.489), #Point A c(Easting_0.0,Northing_0.0)
-              B=c(746476.259,3382265.951), #Point B c(Easting_1.0,Northing_1.0)
+plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
+              B=c(746334.224,3382152.870), #Point B c(Easting_1.0,Northing_1.0)
               infile=SampleInfile,
               outfile="Ind_Multirow_plots",
               nrowplot=2,
@@ -101,8 +102,10 @@ plotshpcreate(A=c(746374.266,3382152.489), #Point A c(Easting_0.0,Northing_0.0)
 # within a single polygone with nrowplot>1 and multirowind=T. If a plot is two rows wide
 # the shape file will encompass the plot as a whole.
 
-plotshpcreate(A=c(746374.266,3382152.489), #Point A c(Easting_0.0,Northing_0.0)
-              B=c(746476.259,3382265.951), #Point B c(Easting_1.0,Northing_1.0)
+### Set working directory to where you want the files to be saved
+setwd("C://Temp")
+plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
+              B=c(746334.224,3382152.870), #Point B c(Easting_1.0,Northing_1.0)
               infile=SampleInfile,
               outfile="Multirowplotscombined",
               nrowplot=2,
