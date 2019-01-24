@@ -59,8 +59,8 @@
 #' ### Set working directory to where you want the files to be saved
 #' setwd("C://Temp")
 #'
-#' plotshpcreate(A=c(746374.266,3382152.489), #Point A c(Easting_0.0,Northing_0.0)
-#'               B=c(746476.259,3382265.951), #Point B c(Easting_1.0,Northing_1.0)
+#' plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
+#'               B=c(746334.224,3382152.870), #Point B c(Easting_1.0,Northing_1.0)
 #'               infile=SampleInfile,
 #'               outfile="Ind_Multirow_plots",
 #'               nrowplot=2,
@@ -81,8 +81,8 @@
 #' 
 #' ### Set working directory to where you want the files to be saved
 #' setwd("C://Temp")
-#' plotshpcreate(A=c(746374.266,3382152.489), #Point A c(Easting_0.0,Northing_0.0)
-#'               B=c(746476.259,3382265.951), #Point B c(Easting_1.0,Northing_1.0)
+#' plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
+#'               B=c(746334.224,3382152.870), #Point B c(Easting_1.0,Northing_1.0)
 #'               infile=SampleInfile,
 #'               outfile="Multirowplotscombined",
 #'               nrowplot=2,
