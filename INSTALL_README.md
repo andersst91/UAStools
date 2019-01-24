@@ -9,6 +9,5 @@ library("UAStools") </br>
 </br>
 </br>
 </br>
-Sample dataset for infile structure is: </br>
-data(SampleInfile)
+#Sample dataset for infile structure is object SampleInfile
 
