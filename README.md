@@ -23,9 +23,8 @@ To install [R/UAStools](https://github.com/andersst91/UAStools/wiki) execute the
     library("UAStools")
 
 # Availivble Functions
-[plotshpcreate.R](https://github.com/andersst91/UAStools/wiki/plotshpcreate.R)  
-Visit the wiki page for more details:  
-https://github.com/andersst91/UAStools/wiki/plotshpcreate.R  
+## [plotshpcreate.R](https://github.com/andersst91/UAStools/wiki/plotshpcreate.R)  
+Visit the wiki page for more details: https://github.com/andersst91/UAStools/wiki/plotshpcreate.R  
 
     ?pltshpcreate
     ?SampleInfile
