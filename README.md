@@ -5,7 +5,11 @@ Steven L. Anderson II (andersst@tamu.edu)
 Seth C. Murray (sethmurray@tamu.edu)
 
 ### Description:
-UAStools is a package developed to provide useful tools for working with remote sensing data set, specifically in reference to field-based, agriculture research plots. Currently, the plotshpcreate.R function is availible to construct a multi-polygon shapefile (.shp) of a reasearch trial, with individual polygons defining specific research plot.
+UAStools is a package developed to provide useful tools for working with remote sensing data set, specifically in reference to field-based, agriculture research plots. Currently, the [plotshpcreate.R](https://github.com/andersst91/UAStools/wiki/plotshpcreate.R) function is availible to construct a multi-polygon shapefile (.shp) of a reasearch trial, with individual polygons defining specific research plot.
+
+### Liscense
+[Licensed](LICENSE.md) under [GPL-3](https://www.r-project.org/Licenses/GPL-3).
+
 
 # Installation  </br>
 To install UAS tools execute the following commands in R:</br>
@@ -21,3 +25,11 @@ library("UAStools") </br>
 </br>
 ?plotshpcreate </br>
 ?SampleInfile
+
+### Citation
+
+To cite R/qtl2 in publications, use:
+https://github.com/andersst91/UAStools
+
+### Liscense
+[Licensed](LICENSE.md) under [GPL-3](https://www.r-project.org/Licenses/GPL-3).
