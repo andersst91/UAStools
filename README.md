@@ -27,9 +27,11 @@ To install [R/UAStools](https://github.com/andersst91/UAStools/wiki) execute the
 Construct a multi-polygon shapefile (.shp) of a reasearch trial, with individual polygons defining specific research field plots.  
 Visit the wiki page for more details: https://github.com/andersst91/UAStools/wiki/plotshpcreate.R  
 
-    ?pltshpcreate
-    ?SampleInfile
+### Note: Make sure to setwd() before executing [plotshpcreate.R](https://github.com/andersst91/UAStools/wiki/plotshpcreate.R)!!!
 
+    ?plotshpcreate
+    ?SampleInfile
+    
 ### Citation
 
 To cite R/UAStools in publications, use:  
