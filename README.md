@@ -22,13 +22,16 @@ To install [R/UAStools](https://github.com/andersst91/UAStools/wiki) execute the
     devtools::install_github("andersst91/UAStools")
     library("UAStools")
 
-</br>
-####Sample dataset for infile structure is object SampleInfile####</br>
-</br>
-</br>
-?plotshpcreate </br>
-?SampleInfile
+# Availible Functions
+## [plotshpcreate.R](https://github.com/andersst91/UAStools/wiki/plotshpcreate.R)  
+Construct a multi-polygon shapefile (.shp) of a reasearch trial, with individual polygons defining specific research field plots.  
+Visit the wiki page for more details: https://github.com/andersst91/UAStools/wiki/plotshpcreate.R  
 
+### Note: Make sure to setwd() before executing [plotshpcreate.R](https://github.com/andersst91/UAStools/wiki/plotshpcreate.R)!!!
+
+    ?plotshpcreate
+    ?SampleInfile
+    
 ### Citation
 
 To cite R/UAStools in publications, use:  
