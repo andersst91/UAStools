@@ -1,5 +1,6 @@
 ### [R/UAStools](https://github.com/andersst91/UAStools/wiki) 
 
+# Authors:
 [Steven L. Anderson](andersst@tamu.edu)
 
 # Installation  </br>
