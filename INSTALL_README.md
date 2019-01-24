@@ -8,5 +8,9 @@ devtools::install_github("andersst91/UAStools") </br>
 library("UAStools") </br>
 
 </br>
-####Sample dataset for infile structure is object SampleInfile####
+####Sample dataset for infile structure is object SampleInfile####</br>
+</br>
+</br>
+?plotshpcreate </br>
+?SampleInfile
 
