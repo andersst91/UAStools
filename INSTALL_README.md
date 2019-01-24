@@ -6,8 +6,7 @@ install.packages("devtools") </br>
 library("devtools") </br>
 devtools::install_github("andersst91/UAStools") </br>
 library("UAStools") </br>
+
 </br>
-</br>
-</br>
-#Sample dataset for infile structure is object SampleInfile
+####Sample dataset for infile structure is object SampleInfile####
 
