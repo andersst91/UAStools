@@ -18,7 +18,7 @@ to be the midpoint of alley at the front of the first plot and the midpoint of t
 \item{B}{Vector of UTM coordinates (Easting,Northing) of "B" point, which corresponds
 to the top left corner of the field trial within the same row as the "A" point}
 
-\item{infile}{Data frame contining seed preperation file and experimental design
+\item{infile}{Data frame containing seed preperation file and experimental design
 (i.e. coordinates of plots within the design grid)}
 
 \item{outfile}{Character assignment to define outputfile names. If left null, default

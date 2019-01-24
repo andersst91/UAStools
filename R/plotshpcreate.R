@@ -14,7 +14,7 @@
 #' to be the midpoint of alley at the front of the first plot and the midpoint of the
 #' @param B Vector of UTM coordinates (Easting,Northing) of "B" point, which corresponds
 #' to the top left corner of the field trial within the same row as the "A" point
-#' @param infile Data frame contining seed preperation file and experimental design
+#' @param infile Data frame containing seed preperation file and experimental design
 #' (i.e. coordinates of plots within the design grid)
 #' @param outfile Character assignment to define outputfile names. If left null, default
 #' file names will be produced.
@@ -194,6 +194,10 @@ plotshpcreate<-function(A=NULL, #Point A c(Easting_0.0,Northing_0.0)
   PlotsSquareM[,2]<- infile$Range-min(infile$Range)+1 #RANGE = Y
   PlotsSquareM[,3]<- infile$Row-min(infile$Row)+1 #ROW = X
   rownames(PlotsSquareM)<-rep(NA,nPlot)
+  
+  if(nrowplot==1){
+    rownames(PlotsSquareM)<-infile$Barcode
+  }
   # PlotsSquareM[,12]<- as.character(infile$Barcode) # Plot number
 
   ####################################################################
