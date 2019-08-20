@@ -3,8 +3,8 @@ citHeader("To cite the UAStools package in publications use:")
 
 citEntry(entry="Article",
 
-        Title = "Prediction of Maize Grain Yield Before Maturity Using Improved Temporal Height Estimate of Unmanned Aerial Systems",
-         Authors = personList(as.person("Steven L. Anderson II"), 
+        title = "Prediction of Maize Grain Yield Before Maturity Using Improved Temporal Height Estimate of Unmanned Aerial Systems",
+         author = personList(as.person("Steven L. Anderson II"), 
                              as.person("Seth C. Murray"),
                              as.person("Lonesome Malambo"),
                              as.person("Colby Ratcliff"),
@@ -13,12 +13,12 @@ citEntry(entry="Article",
                              as.person("Anjin Chang"),
                              as.person("Jinhu Jung"),
                              as.person("J. Alex Thomasson")),
-         year         = "2019"",
-         Journal      = "The Plant Phenome Journal","
-         Volume       = "2",
-         Issue        = "1",
-         DOI          = "10.2135/tppj2019.02.0004",
-         URL          = "http://dx.doi.org/10.2135/tppj2019.02.0004"
+         year         = "2019",
+         journal      = "The Plant Phenome Journal",
+         volume       = "2",
+         issue        = "1",
+         doi          = "10.2135/tppj2019.02.0004",
+         url          = "http://dx.doi.org/10.2135/tppj2019.02.0004",
          
          textVersion = "Anderson, S. L., Murray, S. C., Malambo, L., Ratcliff, C., Popescu, S., Cope, D., Chang, A., Jung, J., & Thomasson, J. A. (2019). Prediction of Maize Grain Yield before Maturity Using Improved Temporal Height Estimates of Unmanned Aerial Systems. The Plant Phenome Journal, 2(1). doi:10.2135/tppj2019.02.0004."
 )

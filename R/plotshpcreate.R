@@ -65,7 +65,7 @@
 #'               infile=SampleInfile,
 #'               outfile="Ind_Multirow_plots",
 #'               nrowplot=2,
-#'               multirowind=T,
+#'               multirowind=TRUE,
 #'               rowspc=2.5,
 #'               rowbuf=0.1, ### Will take off both sides of the plot
 #'               rangespc=25,
@@ -73,8 +73,8 @@
 #'               plotsubset=NULL,
 #'               field="CS17-G2FE",
 #'               unit="feet",
-#'               SquarePlot=T,
-#'               RotatePlot=T)
+#'               SquarePlot=TRUE,
+#'               RotatePlot=TRUE)
 #'
 #' # Creates shape file by combining adacent row of unique plots of multirow plot design
 #' # within a single polygone with nrowplot>1 and multirowind=T. If a plot is two rows wide
@@ -87,7 +87,7 @@
 #'               infile=SampleInfile,
 #'               outfile="Multirowplotscombined",
 #'               nrowplot=2,
-#'               multirowind=F,
+#'               multirowind=FALSE,
 #'               rowspc=2.5,
 #'               rowbuf=0.1, ### Will take off both sides of the plot
 #'               rangespc=25,
@@ -95,8 +95,8 @@
 #'               plotsubset=NULL,
 #'               field="CS17-G2FE",
 #'               unit="feet",
-#'               SquarePlot=T,
-#'               RotatePlot=T)
+#'               SquarePlot=TRUE,
+#'               RotatePlot=TRUE)
 #'
 #' # If the experiment is a single row plot design utilize nrowplot=1.
 
@@ -108,7 +108,7 @@ plotshpcreate<-function(A=NULL, #Point A c(Easting_0.0,Northing_0.0)
                         infile=NULL,
                         outfile=NULL,
                         nrowplot=1,
-                        multirowind=F,
+                        multirowind=FALSE,
                         rowspc=2.5,
                         rowbuf=0.1, ### Will take off both sides of the plot
                         rangespc=25,
@@ -117,8 +117,8 @@ plotshpcreate<-function(A=NULL, #Point A c(Easting_0.0,Northing_0.0)
                         plotsubset=0,
                         field=NULL,
                         unit="feet",
-                        SquarePlot=T,
-                        RotatePlot=T){
+                        SquarePlot=TRUE,
+                        RotatePlot=TRUE){
 # infile<-x
   if (!requireNamespace("rgdal", quietly = TRUE)) {
     stop("Package \"rgdal\" needed for this function to work. Please install it.",

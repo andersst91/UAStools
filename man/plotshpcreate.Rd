@@ -2,12 +2,13 @@
 % Please edit documentation in R/plotshpcreate.R
 \name{plotshpcreate}
 \alias{plotshpcreate}
-\title{Create Plot Level ESRI Polygon Shapefiles (.shp)}
+\title{Plot Shapefile Create}
 \usage{
 plotshpcreate(A = NULL, B = NULL, infile = NULL, outfile = NULL,
-  nrowplot = 1, multirowind = F, rowspc = 2.5, rowbuf = 0.1,
-  rangespc = 25, rangebuf = 2, plotsubset = NULL, field = NULL,
-  unit = "feet", SquarePlot = T, RotatePlot = T)
+  nrowplot = 1, multirowind = FALSE, rowspc = 2.5, rowbuf = 0.1,
+  rangespc = 25, rangebuf = 2, stagger = NULL, plotsubset = 0,
+  field = NULL, unit = "feet", SquarePlot = TRUE,
+  RotatePlot = TRUE)
 }
 \arguments{
 \item{A}{Vector of UTM coordinates (Easting,Northing) of "A" point, which corresponds
@@ -44,6 +45,9 @@ plot length including half alley distance on either side of the plot. Default 25
 \item{rangebuf}{Distance removed from both sides of rangespc to create a buffer zone between
 plots boundaries. Default is 2 feet in reference to four foot allies. Note: If alleys are
 4 feet rangebuf should be set to 2 feet to remove from both ends of the polygon.}
+
+\item{stagger}{Numeric vector of length three defining [1] row where staggers starts, 
+[2] rows sowed by planted in a single pass, and [3] stagger offset distance from A point.}
 
 \item{plotsubset}{Defines how many adjacent rows should be excluded from the shapefile.
 This parameter is useful for multirow plots where the central plots are of interest. If plotsubset=1,
@@ -87,7 +91,7 @@ plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
               infile=SampleInfile,
               outfile="Ind_Multirow_plots",
               nrowplot=2,
-              multirowind=T,
+              multirowind=TRUE,
               rowspc=2.5,
               rowbuf=0.1, ### Will take off both sides of the plot
               rangespc=25,
@@ -95,8 +99,8 @@ plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
               plotsubset=NULL,
               field="CS17-G2FE",
               unit="feet",
-              SquarePlot=T,
-              RotatePlot=T)
+              SquarePlot=TRUE,
+              RotatePlot=TRUE)
 
 # Creates shape file by combining adacent row of unique plots of multirow plot design
 # within a single polygone with nrowplot>1 and multirowind=T. If a plot is two rows wide
@@ -109,7 +113,7 @@ plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
               infile=SampleInfile,
               outfile="Multirowplotscombined",
               nrowplot=2,
-              multirowind=F,
+              multirowind=FALSE,
               rowspc=2.5,
               rowbuf=0.1, ### Will take off both sides of the plot
               rangespc=25,
@@ -117,8 +121,8 @@ plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
               plotsubset=NULL,
               field="CS17-G2FE",
               unit="feet",
-              SquarePlot=T,
-              RotatePlot=T)
+              SquarePlot=TRUE,
+              RotatePlot=TRUE)
 
 # If the experiment is a single row plot design utilize nrowplot=1.
 }
