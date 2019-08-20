@@ -35,10 +35,7 @@ Visit the wiki page for more details: https://github.com/andersst91/UAStools/wik
 ### Citation
 
 To cite R/UAStools in publications, use:  
-<<<<<<< HEAD
-=======
 
->>>>>>> 62d464669c884bc39c7b029b935ab92be32326a4
 Anderson, S.L., S. Murray, L. Malambo, C. Ratcliff, S. Popescu, D. Cope, et al. 2019. Prediction of Maize Grain Yield Before Maturity Using Improved Temporal Height Estimates of Unmanned Aerial Systems. The Plant Phenome Journal. doi:10.2135/tppj2019.02.0004
 
 ### Liscense
