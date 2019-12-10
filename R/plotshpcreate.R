@@ -14,6 +14,8 @@
 #' to be the midpoint of alley at the front of the first plot and the midpoint of the
 #' @param B Vector of UTM coordinates (Easting,Northing) of "B" point, which corresponds
 #' to the top left corner of the field trial within the same row as the "A" point
+#' @param UTMzone Character parameter defining UTM zone number. Default is NULL and will result in an coordinate reference system of "NA".
+#' @param Hemisphere Character parameter that designates the Northern "N" or Southern "S" Hemisphere. Default is "N".
 #' @param infile Data frame containing seed preperation file and experimental design
 #' (i.e. coordinates of plots within the design grid)
 #' @param outfile Character assignment to define outputfile names. If left null, default
@@ -44,9 +46,7 @@
 #' Units can also be input as meters using unit="meter".
 #' @param SquarePlot Logic parameter to indicated if PDF file is desired for visualization of none rotated polygons.
 #' @param RotatePlot Logic parameter to indicated if PDF file is desired for visualization of rotated polygons.
-#' @param UTMzone Character parameter defining UTM zone number. Default is NULL and will result in an coordinate reference system of "NA".
-#' @param Hemisphere Character parameter that designates the Northern "N" or Southern "S" Hemisphere. Default is "N".
-#' @import rgdal sp sf
+#' @import rgdal sp``
 #' @export
 #' @return NULL 
 #' @note it is recommendeed to repeat unique Barcodes and Plot numbers if there are multirow plots (mrowplot>1) as
@@ -64,6 +64,8 @@
 #'
 #' plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
 #'               B=c(746334.224,3382152.870), #Point B c(Easting_1.0,Northing_1.0)
+#'               UTMzone="14",
+#'               Hemisphere="N",
 #'               infile=SampleInfile,
 #'               outfile="Ind_Multirow_plots",
 #'               nrowplot=2,
@@ -86,6 +88,8 @@
 #' setwd("C://Temp")
 #' plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
 #'               B=c(746334.224,3382152.870), #Point B c(Easting_1.0,Northing_1.0)
+#'               UTMzone="NULL"14",
+#'               Hemisphere="N"
 #'               infile=SampleInfile,
 #'               outfile="Multirowplotscombined",
 #'               nrowplot=2,
@@ -107,6 +111,8 @@
 
 plotshpcreate<-function(A=NULL, #Point A c(Easting_0.0,Northing_0.0)
                         B=NULL, #Point B c(Easting_1.0,Northing_1.0)
+                        UTMzone=NULL,
+                        Hemisphere="N",
                         infile=NULL,
                         outfile=NULL,
                         nrowplot=1,
@@ -886,6 +892,7 @@ for (i in 1:nrow(PlotsSquareM)){
 
   if(is.null(UTMzone)){
     SpatialPolygonsToMake <- SpatialPolygons((PolygonsToMake))
+    warning("Coordinate reference system not defined 'UTMzone=NULL'; This may result in difficulties loading shapefiles into other programs.")
   }
   
   if(!is.null(UTMzone)&Hemisphere=="N"){
@@ -930,6 +937,7 @@ for (i in 1:nrow(PlotsSquareM)){
 
   if(is.null(UTMzone)){
     SpatialPolygonsToMake <- SpatialPolygons((PolygonsToMake))
+    warning("Coordinate reference system not defined 'UTMzone=NULL'; This may result in difficulties loading shapefiles into other programs.")
   }
   
   if(!is.null(UTMzone)&Hemisphere=="N"){
@@ -958,9 +966,7 @@ for (i in 1:nrow(PlotsSquareM)){
            verbose = TRUE,
            overwrite_layer = T,
            driver="ESRI Shapefile")
-  
-  if (is.null(UTMzone))
-  {warning("Coordinate reference system not defined 'UTMzone=NULL'; This may result in difficulties loading shapefiles into other programs.")}
+
   
 }
   # }
