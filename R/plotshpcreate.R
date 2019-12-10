@@ -88,7 +88,7 @@
 #' setwd("C://Temp")
 #' plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
 #'               B=c(746334.224,3382152.870), #Point B c(Easting_1.0,Northing_1.0)
-#'               UTMzone="NULL"14",
+#'               UTMzone="14",
 #'               Hemisphere="N"
 #'               infile=SampleInfile,
 #'               outfile="Multirowplotscombined",
