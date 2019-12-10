@@ -44,7 +44,9 @@
 #' Units can also be input as meters using unit="meter".
 #' @param SquarePlot Logic parameter to indicated if PDF file is desired for visualization of none rotated polygons.
 #' @param RotatePlot Logic parameter to indicated if PDF file is desired for visualization of rotated polygons.
-#' @import rgdal sp 
+#' @param UTMzone Character parameter defining UTM zone number. Default is NULL and will result in an coordinate reference system of "NA".
+#' @param Hemisphere Character parameter that designates the Northern "N" or Southern "S" Hemisphere. Default is "N".
+#' @import rgdal sp sf
 #' @export
 #' @return NULL 
 #' @note it is recommendeed to repeat unique Barcodes and Plot numbers if there are multirow plots (mrowplot>1) as
@@ -882,7 +884,23 @@ for (i in 1:nrow(PlotsSquareM)){
                                     rownames(PlotsAdjustedM)[i])
   }
 
-  SpatialPolygonsToMake<- SpatialPolygons((PolygonsToMake))
+  if(is.null(UTMzone)){
+    SpatialPolygonsToMake <- SpatialPolygons((PolygonsToMake))
+  }
+  
+  if(!is.null(UTMzone)&Hemisphere=="N"){
+    SpatialPolygonsToMake <- SpatialPolygons((PolygonsToMake),
+                                             proj4string = CRS(
+                                               as.character(paste("+proj=utm +zone=",UTMzone," +datum=NAD83 +units=m +no_defs +ellps=GRS80",sep=""))  
+                                             ))
+  }
+  
+  if(!is.null(UTMzone)&Hemisphere=="S"){
+    SpatialPolygonsToMake <- SpatialPolygons((PolygonsToMake),
+                                             proj4string = CRS(
+                                               as.character(paste("+proj=utm +zone=",UTMzone," +south +datum=NAD83 +units=m +no_defs +ellps=GRS80",sep=""))  
+                                             ))
+  }
 
   SpatialPolygonsToMake.df <- SpatialPolygonsDataFrame(SpatialPolygonsToMake,
                                                        data.frame(id=rownames(PlotsAdjustedM),
@@ -910,7 +928,23 @@ for (i in 1:nrow(PlotsSquareM)){
                                     rownames(PlotsAdjustedMBuf)[i])
   }
 
-  SpatialPolygonsToMake<- SpatialPolygons((PolygonsToMake))
+  if(is.null(UTMzone)){
+    SpatialPolygonsToMake <- SpatialPolygons((PolygonsToMake))
+  }
+  
+  if(!is.null(UTMzone)&Hemisphere=="N"){
+    SpatialPolygonsToMake <- SpatialPolygons((PolygonsToMake),
+                                             proj4string = CRS(
+                                               as.character(paste("+proj=utm +zone=",UTMzone," +datum=NAD83 +units=m +no_defs +ellps=GRS80",sep=""))  
+                                             ))
+  }
+  
+  if(!is.null(UTMzone)&Hemisphere=="S"){
+    SpatialPolygonsToMake <- SpatialPolygons((PolygonsToMake),
+                                             proj4string = CRS(
+                                               as.character(paste("+proj=utm +zone=",UTMzone," +south +datum=NAD83 +units=m +no_defs +ellps=GRS80",sep=""))  
+                                             ))
+  }
 
   SpatialPolygonsToMake.df <- SpatialPolygonsDataFrame(SpatialPolygonsToMake,
                                                        data.frame(id=rownames(PlotsAdjustedMBuf),
@@ -924,5 +958,9 @@ for (i in 1:nrow(PlotsSquareM)){
            verbose = TRUE,
            overwrite_layer = T,
            driver="ESRI Shapefile")
+  
+  if (is.null(UTMzone))
+  {warning("Coordinate reference system not defined 'UTMzone=NULL'; This may result in difficulties loading shapefiles into other programs.")}
+  
 }
   # }

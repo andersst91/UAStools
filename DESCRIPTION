@@ -1,8 +1,8 @@
 Package: UAStools
 Type: Package
 Title: Tools for Field Based Remote Sensing Applications within Plot Based Agriculture 
-Version: 0.2.0
-Date: 8/20/2019
+Version: 0.3.0
+Date: 12/09/2019
 Author: Steven L. Anderson II,
         Seth C. Murray
 Maintainer: Steven L. Anderson II <andersst@tamu.edu>
@@ -11,4 +11,4 @@ License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Imports:rgdal (>= 1.2-18), sp (>= 1.2-7)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
