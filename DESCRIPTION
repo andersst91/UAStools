@@ -2,13 +2,14 @@ Package: UAStools
 Type: Package
 Title: Tools for Field Based Remote Sensing Applications within Plot Based Agriculture 
 Version: 0.4.0
-Date: 12/09/2019
+Date: 09/10/2020
 Author: Steven L. Anderson II,
         Seth C. Murray
 Maintainer: Steven L. Anderson II <andersst@tamu.edu>
 Description: This package provide a function to automate field plot shapefile (.shp) polygons for use in data extraction of remote sensing data sets.
 License: GPL-2
 Encoding: UTF-8
+Depends: R (>= 3.5.0)
 LazyData: true
 Imports: rgdal (>= 1.2-18), sp (>= 1.2-7)
 RoxygenNote: 7.1.1
