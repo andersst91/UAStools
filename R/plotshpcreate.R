@@ -46,7 +46,7 @@
 #' Units can also be input as meters using unit="meter".
 #' @param SquarePlot Logic parameter to indicated if PDF file is desired for visualization of none rotated polygons.
 #' @param RotatePlot Logic parameter to indicated if PDF file is desired for visualization of rotated polygons.
-#' @import rgdal sp``
+#' @import rgdal sp
 #' @export
 #' @return NULL 
 #' @note it is recommendeed to repeat unique Barcodes and Plot numbers if there are multirow plots (mrowplot>1) as

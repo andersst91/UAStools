@@ -4,11 +4,26 @@
 \alias{plotshpcreate}
 \title{Plot Shapefile Create}
 \usage{
-plotshpcreate(A = NULL, B = NULL, infile = NULL, outfile = NULL,
-  nrowplot = 1, multirowind = FALSE, rowspc = 2.5, rowbuf = 0.1,
-  rangespc = 25, rangebuf = 2, stagger = NULL, plotsubset = 0,
-  field = NULL, unit = "feet", SquarePlot = TRUE,
-  RotatePlot = TRUE)
+plotshpcreate(
+  A = NULL,
+  B = NULL,
+  UTMzone = NULL,
+  Hemisphere = "N",
+  infile = NULL,
+  outfile = NULL,
+  nrowplot = 1,
+  multirowind = FALSE,
+  rowspc = 2.5,
+  rowbuf = 0.1,
+  rangespc = 25,
+  rangebuf = 2,
+  stagger = NULL,
+  plotsubset = 0,
+  field = NULL,
+  unit = "feet",
+  SquarePlot = TRUE,
+  RotatePlot = TRUE
+)
 }
 \arguments{
 \item{A}{Vector of UTM coordinates (Easting,Northing) of "A" point, which corresponds
@@ -18,6 +33,10 @@ to be the midpoint of alley at the front of the first plot and the midpoint of t
 
 \item{B}{Vector of UTM coordinates (Easting,Northing) of "B" point, which corresponds
 to the top left corner of the field trial within the same row as the "A" point}
+
+\item{UTMzone}{Character parameter defining UTM zone number. Default is NULL and will result in an coordinate reference system of "NA".}
+
+\item{Hemisphere}{Character parameter that designates the Northern "N" or Southern "S" Hemisphere. Default is "N".}
 
 \item{infile}{Data frame containing seed preperation file and experimental design
 (i.e. coordinates of plots within the design grid)}
@@ -88,6 +107,8 @@ setwd("C://Temp")
 
 plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
               B=c(746334.224,3382152.870), #Point B c(Easting_1.0,Northing_1.0)
+              UTMzone="14",
+              Hemisphere="N",
               infile=SampleInfile,
               outfile="Ind_Multirow_plots",
               nrowplot=2,
@@ -110,6 +131,8 @@ plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
 setwd("C://Temp")
 plotshpcreate(A=c(746239.817,3382052.264), #Point A c(Easting_0.0,Northing_0.0)
               B=c(746334.224,3382152.870), #Point B c(Easting_1.0,Northing_1.0)
+              UTMzone="14",
+              Hemisphere="N"
               infile=SampleInfile,
               outfile="Multirowplotscombined",
               nrowplot=2,
