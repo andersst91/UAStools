@@ -5,8 +5,7 @@ Steven L. Anderson II (andersst@tamu.edu)
 Seth C. Murray (sethmurray@tamu.edu)
 
 ### Description:
-UAStools is a package developed to provide useful tools for working with remote sensing data set, specifically in reference to field-based, agriculture research plots. Currently, the [plotshpcreate.R](https://github.com/andersst91/UAStools/wiki/plotshpcreate.R) function is available to construct a multi-polygon shapefile (.shp) of a reasearch trial, with individual polygons defining specific research plot.
-
+UAStools is a package developed to provide useful tools for working with remote sensing data set, specifically in reference to field-based, agriculture research plots. Currently, the [plotshpcreate.R](https://github.com/andersst91/UAStools/wiki/plotshpcreate.R) function is available to construct a multi-polygon shapefile (.shp) of a reasearch trial, with individual polygons defining specific research plot. A full video tutorial is availible with accompanied [script](files/path/to/file "ALT TEXT").
 
 # Installation  
 Make sure you have the latest version of [R](https://cran.r-project.org/). 
